@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UdharPay — Privacy Policy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --primary: #4F46E5;
+    --primary-light: #818CF8;
+    --accent: #10B981;
+    --danger: #F43F5E;
+    --bg: #0A0A14;
+    --surface: #12121F;
+    --card: #1A1A2E;
+    --border: rgba(255,255,255,0.08);
+    --text: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-hint: #475569;
+    --gold: #FFD700;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Sora', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* Animated background */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:
+      radial-gradient(ellipse 80% 50% at 20% 20%, rgba(79,70,229,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(16,185,129,0.08) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HERO HEADER */
+  .hero {
+    padding: 60px 0 48px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .logo-icon {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, var(--primary), #7C3AED);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 0 30px rgba(79,70,229,0.4);
+  }
+
+  .logo-text {
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, #fff 30%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .badge-green {
+    background: rgba(16,185,129,0.12);
+    border: 1px solid rgba(16,185,129,0.3);
+    color: var(--accent);
+  }
+
+  .badge-blue {
+    background: rgba(79,70,229,0.12);
+    border: 1px solid rgba(79,70,229,0.3);
+    color: var(--primary-light);
+  }
+
+  /* CONTENT */
+  .content {
+    padding: 48px 0 80px;
+  }
+
+  /* QUICK SUMMARY BOX */
+  .summary-box {
+    background: linear-gradient(135deg, rgba(79,70,229,0.12), rgba(124,58,237,0.08));
+    border: 1px solid rgba(79,70,229,0.3);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+  }
+
+  .summary-box h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+
+  .summary-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .summary-item .icon {
+    font-size: 18px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .summary-item p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .summary-item strong {
+    display: block;
+    color: var(--text);
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 44px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-num {
+    width: 30px;
+    height: 30px;
+    background: var(--primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .section p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .section ul {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+  }
+
+  .section ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section ul li:last-child {
+    border-bottom: none;
+  }
+
+  .section ul li::before {
+    content: '→';
+    color: var(--primary-light);
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* HIGHLIGHT CARD */
+  .highlight {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+
+  .highlight.green {
+    border-color: rgba(16,185,129,0.25);
+    background: rgba(16,185,129,0.06);
+  }
+
+  .highlight.red {
+    border-color: rgba(244,63,94,0.25);
+    background: rgba(244,63,94,0.06);
+  }
+
+  .highlight p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .highlight.green p { color: #6EE7B7; }
+  .highlight.red p { color: #FDA4AF; }
+
+  /* TABLE */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+
+  .data-table th {
+    background: rgba(79,70,229,0.15);
+    color: var(--primary-light);
+    padding: 10px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .data-table td {
+    padding: 10px 16px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .data-table tr:hover td {
+    background: rgba(255,255,255,0.02);
+  }
+
+  /* CONTACT */
+  .contact-card {
+    background: linear-gradient(135deg, var(--card), rgba(79,70,229,0.08));
+    border: 1px solid rgba(79,70,229,0.2);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .contact-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .contact-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .contact-email:hover { opacity: 0.85; }
+
+  /* FOOTER */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    text-align: center;
+    color: var(--text-hint);
+    font-size: 13px;
+  }
+
+  .footer span {
+    color: var(--primary-light);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .hero { padding: 40px 0 32px; }
+    .summary-box { padding: 20px; }
+    .section h2 { font-size: 16px; }
+    .data-table { font-size: 12px; }
+    .data-table th, .data-table td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="logo-wrap">
+      <div class="logo-icon">₹</div>
+      <span class="logo-text">UdharPay</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="hero-meta">
+      <span class="badge badge-green">✓ GDPR Compliant</span>
+      <span class="badge badge-blue">Last Updated: March 2026</span>
+      <span class="badge badge-green">✓ No Data Selling</span>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- QUICK SUMMARY -->
+    <div class="summary-box">
+      <h3>⚡ Quick Summary</h3>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <span class="icon">🔒</span>
+          <div>
+            <strong>Your Data Stays Private</strong>
+            <p>We never sell your data to anyone, ever.</p>
+          </div>
+        </div>
+        <div class="summary-item">
+          <span class="icon">📱</span>
+          <div>
+            <strong>Stored Locally</strong>
+            <p>All business data is stored on your device first.</p>
+          </div>
+        </div>
+        <div class="summary-item">
+          <span class="icon">☁️</span>
+          <div>
+            <strong>Cloud Optional</strong>
+            <p>Cloud sync is optional and only you can access it.</p>
+          </div>
+        </div>
+        <div class="summary-item">
+          <span class="icon">🗑️</span>
+          <div>
+            <strong>Delete Anytime</strong>
+            <p>You can delete all your data at any time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. INTRODUCTION -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">01</div>
+        <h2>Introduction</h2>
+      </div>
+      <p>Welcome to <strong>UdharPay</strong> ("we", "our", or "us"). UdharPay is a smart credit management application designed for Indian shopkeepers to track udhar (credit), manage customers, and recover payments efficiently.</p>
+      <p>This Privacy Policy explains how we collect, use, store, and protect your information when you use our mobile application. By using UdharPay, you agree to the practices described in this policy.</p>
+      <div class="highlight green">
+        <p>🇮🇳 UdharPay is built for Indian shopkeepers and complies with applicable Indian data protection laws including the Digital Personal Data Protection Act 2023 (DPDP Act).</p>
+      </div>
+    </div>
+
+    <!-- 2. DATA WE COLLECT -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">02</div>
+        <h2>Information We Collect</h2>
+      </div>
+      <p>We collect only what is necessary to provide our services:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>What We Collect</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Business Info</td>
+            <td>Shop name, owner name, UPI ID, phone</td>
+            <td>Personalize your experience</td>
+          </tr>
+          <tr>
+            <td>Customer Data</td>
+            <td>Names, phone numbers, addresses</td>
+            <td>Manage your customer list</td>
+          </tr>
+          <tr>
+            <td>Transaction Data</td>
+            <td>Udhar amounts, dates, payment records</td>
+            <td>Track your business finances</td>
+          </tr>
+          <tr>
+            <td>Photos</td>
+            <td>Customer photos, bill photos (optional)</td>
+            <td>Visual identification & records</td>
+          </tr>
+          <tr>
+            <td>Device Data</td>
+            <td>Anonymous device ID, app version</td>
+            <td>Crash reporting & improvements</td>
+          </tr>
+          <tr>
+            <td>Usage Data</td>
+            <td>Features used, session duration</td>
+            <td>Improve app performance</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 3. HOW WE USE DATA -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">03</div>
+        <h2>How We Use Your Information</h2>
+      </div>
+      <ul>
+        <li>Provide and operate the UdharPay application and its features</li>
+        <li>Enable cloud backup and sync across your devices (only when you turn it on)</li>
+        <li>Process in-app purchases and premium subscriptions via Google Play</li>
+        <li>Send push notifications for payment reminders and app updates (only with permission)</li>
+        <li>Power AI features using Google Gemini (data sent is anonymized where possible)</li>
+        <li>Generate PDF reports and invoices for your business</li>
+        <li>Improve app performance and fix bugs</li>
+        <li>Process referral rewards</li>
+      </ul>
+      <div class="highlight red">
+        <p>🚫 We NEVER sell, rent, or share your personal or customer data with third parties for marketing purposes.</p>
+      </div>
+    </div>
+
+    <!-- 4. DATA STORAGE -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">04</div>
+        <h2>Data Storage & Security</h2>
+      </div>
+      <p>Your data is stored in the following ways:</p>
+      <ul>
+        <li><strong>Local Storage:</strong> All your customer and transaction data is stored on your device using encrypted local storage</li>
+        <li><strong>Cloud Storage (Optional):</strong> If you enable Cloud Sync, your data is stored in Google Firebase Firestore with end-to-end encryption</li>
+        <li><strong>Photos:</strong> Stored locally in your device's app directory, never uploaded unless cloud sync is enabled</li>
+        <li><strong>Backups:</strong> Local backup files are stored on your device and shared only when you choose to export</li>
+      </ul>
+      <div class="highlight green">
+        <p>🔒 Cloud data is encrypted and only accessible using your unique Firebase authentication ID. No one, including UdharPay team, can access your business data.</p>
+      </div>
+    </div>
+
+    <!-- 5. THIRD PARTIES -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">05</div>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>UdharPay uses the following trusted third-party services:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+            <th>Data Shared</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Google Firebase</td>
+            <td>Cloud sync, authentication, push notifications</td>
+            <td>Anonymized user ID, synced data</td>
+          </tr>
+          <tr>
+            <td>Google AdMob</td>
+            <td>Show ads to free users</td>
+            <td>Device advertising ID (anonymized)</td>
+          </tr>
+          <tr>
+            <td>Google Gemini AI</td>
+            <td>Power UdharPay AI features</td>
+            <td>Anonymized business context</td>
+          </tr>
+          <tr>
+            <td>Google Play Billing</td>
+            <td>Process premium subscriptions & coin purchases</td>
+            <td>Purchase tokens only (no card data)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Each service has its own privacy policy. We encourage you to review Google's Privacy Policy at <strong>policies.google.com</strong>.</p>
+    </div>
+
+    <!-- 6. PERMISSIONS -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">06</div>
+        <h2>App Permissions</h2>
+      </div>
+      <p>UdharPay requests the following device permissions:</p>
+      <ul>
+        <li><strong>Camera:</strong> To take customer photos and bill photos for records</li>
+        <li><strong>Storage/Photos:</strong> To save and retrieve customer photos and backups</li>
+        <li><strong>Internet:</strong> For AI features, cloud sync, and ads</li>
+        <li><strong>Biometrics/Fingerprint:</strong> For app lock security (data never leaves device)</li>
+        <li><strong>Notifications:</strong> For payment reminders and app alerts</li>
+        <li><strong>Vibration:</strong> For haptic feedback on interactions</li>
+      </ul>
+      <p>All permissions are requested only when needed and can be revoked from your device settings at any time.</p>
+    </div>
+
+    <!-- 7. YOUR RIGHTS -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">07</div>
+        <h2>Your Rights & Controls</h2>
+      </div>
+      <p>You have full control over your data:</p>
+      <ul>
+        <li><strong>Access:</strong> All your data is visible within the app at all times</li>
+        <li><strong>Export:</strong> Export all data as PDF, CSV, or backup file anytime</li>
+        <li><strong>Delete Local Data:</strong> Settings → Danger Zone → Clear All Data</li>
+        <li><strong>Delete Cloud Data:</strong> Settings → Cloud Sync → Delete Cloud Data</li>
+        <li><strong>Disable Cloud Sync:</strong> Turn off in Settings → Cloud Sync anytime</li>
+        <li><strong>Opt out of Ads:</strong> Upgrade to Premium to remove all advertisements</li>
+        <li><strong>Revoke Permissions:</strong> Via Android Settings → Apps → UdharPay → Permissions</li>
+      </ul>
+    </div>
+
+    <!-- 8. CHILDREN -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">08</div>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>UdharPay is designed for business use by adults (18+). We do not knowingly collect personal information from children under 13. If you believe a child has provided us information, please contact us immediately and we will delete it.</p>
+    </div>
+
+    <!-- 9. CHANGES -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">09</div>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time. We will notify you of significant changes through the app or via email. The "Last Updated" date at the top of this policy reflects the most recent revision.</p>
+      <p>Continued use of UdharPay after changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-card">
+      <h3>📬 Questions or Concerns?</h3>
+      <p>If you have any questions about this Privacy Policy or how we handle your data, we're here to help.</p>
+      <a href="mailto:privacy@udharpay.app" class="contact-email">
+        ✉️ privacy@udharpay.app
+      </a>
+      <p style="margin-top: 16px; font-size: 12px; color: var(--text-hint);">
+        We respond within 48 hours
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>© 2026 <span>UdharPay</span> — Smart Credit Management for Indian Shopkeepers 🇮🇳</p>
+    <p style="margin-top: 6px;">Made with ❤️ for Dukandaars across India</p>
+  </div>
+
+</div>
+
+</body>
+</html>
